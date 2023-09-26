@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import 'antd/dist/antd'
-import '@quasar/extras'
+import '@quasar/extras/ionicons-v4/ionicons-v4.css'
 //import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

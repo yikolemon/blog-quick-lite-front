@@ -30,7 +30,7 @@ export default function Navigation({user}) {
             <span className="menu-title">
                 My React Blog
             </span>
-            <div className="menu-content-container">
+            <div className={`menu-content-container ${menuActive && 'active'}`}>
                 <ul>
                     {navLinks.map((link, index) => (
                         <li key={index}>
@@ -43,8 +43,8 @@ export default function Navigation({user}) {
                     <Avatar style={{ backgroundColor: '#fde3cf', color: '#f56a00' }} size={38}>U</Avatar>
                     <span className="menu-avatar-name">{`${user.firstName} ${user.lastName}`}</span>
                 </span>
-                <q-icon name="ion-ios-square-outline" />
             </div>
+            <i className="ionicons icon ion-ios-menu" onClick={()=>setMenuActive(!menuActive)}/>
         </nav>
     );
 }
