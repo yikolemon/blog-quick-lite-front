@@ -30,7 +30,7 @@ export default function Navigation({user}) {
             <span className="menu-title">
                 My React Blog
             </span>
-            <div className={`menu-content-container ${menuActive && 'active'}`}>
+            <div className={`menu-content-container ${menuActive && 'active'}`} onMouseLeave={()=>{setMenuActive(false)}}>
                 <ul>
                     {navLinks.map((link, index) => (
                         <li key={index}>
@@ -39,7 +39,7 @@ export default function Navigation({user}) {
                     ))
                     }
                 </ul>
-                <span>
+                <span className="menu-avatar-container">
                     <Avatar style={{ backgroundColor: '#fde3cf', color: '#f56a00' }} size={38}>U</Avatar>
                     <span className="menu-avatar-name">{`${user.firstName} ${user.lastName}`}</span>
                 </span>
